@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunny Bhanu | SAP ABAP Consultant</title>
+<meta name="description" content="Sunny Bhanu, Senior SAP ABAP Consultant. S/4HANA, clean core, ABAP Cloud, RAP, CDS, AMDP, OData, Adobe Forms and SAP integration. Available for freelance, contract and project work.">
+<meta property="og:title" content="Sunny Bhanu | SAP ABAP Consultant">
+<meta property="og:description" content="S/4HANA, clean core, ABAP Cloud, RAP, CDS, OData and SAP integration. Available for freelance, contract and project work.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sunny-bhanu.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a6ed1'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fa; --surface:#ffffff; --surface-2:#f0f3f7; --text:#121826; --muted:#5b6577;
+  --line:#e2e7ef; --accent:#0a6ed1; --accent-2:#0a8f7a; --accent-soft:#e7f1fc; --code-bg:#0f1724; --code-text:#d6e2f2;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px rgba(16,24,40,.06);
+  --radius:14px; --max:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0f17; --surface:#121826; --surface-2:#182133; --text:#e8edf5; --muted:#9aa6b8;
+    --line:#243049; --accent:#4ea1f3; --accent-2:#36c2a8; --accent-soft:#14263f; --code-bg:#0a0e16; --code-text:#d6e2f2;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0f17; --surface:#121826; --surface-2:#182133; --text:#e8edf5; --muted:#9aa6b8;
+  --line:#243049; --accent:#4ea1f3; --accent-2:#36c2a8; --accent-soft:#14263f; --code-bg:#0a0e16; --code-text:#d6e2f2;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text)}
+.brand:hover{text-decoration:none}
+.mark{width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800;letter-spacing:.5px}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+.nav ul a{color:var(--muted);font-size:14px;font-weight:500}
+.nav ul a:hover{color:var(--text);text-decoration:none}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:9px;width:36px;height:36px;cursor:pointer;display:grid;place-items:center}
+@media (max-width:760px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--accent-2);background:color-mix(in srgb,var(--accent-2) 12%,transparent);padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent-2) 25%,transparent)}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-.02em;margin:18px 0 14px;font-weight:800}
+h1 .hl{color:var(--accent)}
+.lead{font-size:18px;color:var(--muted);max-width:600px;margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.chip{font-size:13px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--text)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid transparent}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:var(--surface);color:var(--text);border-color:var(--line)}
+.code-card{background:var(--code-bg);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid color-mix(in srgb,var(--line) 40%,transparent)}
+.code-top{display:flex;align-items:center;gap:7px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.07)}
+.code-top i{width:11px;height:11px;border-radius:50%;display:block}
+.code-top span{margin-left:8px;font-size:12px;color:#8ea0b8}
+pre{margin:0;padding:18px 18px 20px;color:var(--code-text);font-size:11.5px;line-height:1.7;overflow-x:auto}
+.k{color:#7cc4ff}.s{color:#9be29b}.c{color:#6f8299}.t{color:#ffcf7a}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding:48px 0 40px}}
+
+/* stats */
+.hero .wrap.stats-wrap{display:block;margin-top:44px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.stat b{display:block;font-size:26px;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:14px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.stat b{font-size:21px}.stat{padding:16px}}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+h2{font-size:clamp(26px,3.2vw,34px);letter-spacing:-.02em;margin:0;line-height:1.15}
+.sec-head p{margin:6px 0 0;color:var(--muted);max-width:620px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:900px){.g3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card h3{margin:0 0 8px;font-size:17px;line-height:1.35}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.icon{width:38px;height:38px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding:0;list-style:none}
+.tag{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;padding:3px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.card .more{margin-top:auto;padding-top:16px;font-size:14px;font-weight:600}
+.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.alt .card{background:var(--bg);box-shadow:none}
+
+/* case studies */
+.case{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.case:first-child{border-top:none;padding-top:0}
+.case .area{font-size:13px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;padding-top:3px}
+.case h3{margin:0 0 6px;font-size:18px}
+.case p{margin:0;color:var(--muted)}
+@media (max-width:640px){.case{grid-template-columns:1fr;gap:6px}}
+
+/* timeline */
+.tl{position:relative;margin:0;padding:0;list-style:none}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl li{position:relative;padding:0 0 30px 34px}
+.tl li:last-child{padding-bottom:0}
+.tl li:before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.tl .when{font-size:13px;color:var(--muted);font-weight:500}
+.tl h3{margin:2px 0 2px;font-size:17px}
+.tl .org{font-weight:600;color:var(--text);font-size:15px}
+.tl ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+.tl ul li{padding:0;margin:3px 0}
+.tl ul li:before{display:none}
+
+/* skills */
+.skill-group h3{font-size:15px;margin:0 0 10px}
+.skill-group .tags{margin-top:0}
+.skill-group .tag{font-size:12.5px;padding:5px 10px;background:var(--surface-2);color:var(--text)}
+
+/* certs */
+.cert{display:flex;gap:14px;align-items:flex-start}
+.badge{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:13px}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 55%,var(--accent-2)));color:#fff;border-radius:20px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.contact h2{color:#fff}
+.contact p{margin:8px 0 0;opacity:.92;max-width:560px}
+.contact .btn-primary{background:#fff;color:#0a4f96}
+.contact .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sunny Bhanu home"><span class="mark">SB</span>Sunny Bhanu</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Available for freelance, contract and project work</span>
+      <h1>Senior <span class="hl">SAP ABAP</span> Consultant building clean-core S/4HANA solutions</h1>
+      <p class="lead">5+ years delivering S/4HANA implementations, HANA migrations and support. I build extensions with ABAP Cloud, RAP, CDS and OData, integrate SAP with external systems over REST, and deliver the full RICEFW stack.</p>
+      <ul class="chips">
+        <li class="chip">S/4HANA</li><li class="chip">RISE private cloud</li><li class="chip">Clean Core</li>
+        <li class="chip">ABAP Cloud</li><li class="chip">RAP</li><li class="chip">CDS</li><li class="chip">AMDP</li>
+        <li class="chip">OData</li><li class="chip">SAP BTP</li><li class="chip">Adobe Forms</li><li class="chip">REST APIs</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sunnybhanu/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          Connect on LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/sunny-bhanu" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+          GitHub</a>
+        <a class="btn btn-ghost" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="code-card" aria-label="Sample RAP behaviour definition">
+      <div class="code-top"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="mono">zr_servicerequest.bdef</span></div>
+<pre><code><span class="k">managed implementation in class</span> zbp_r_srvreq <span class="k">unique</span>;
+<span class="k">strict</span> ( 2 );
+
+<span class="k">define behavior for</span> <span class="t">ZR_ServiceRequest</span> <span class="k">alias</span> Request
+<span class="k">persistent table</span> zsrv_request
+<span class="k">early numbering</span>
+<span class="k">lock master</span>
+<span class="k">authorization master</span> ( <span class="k">instance</span> )
+<span class="k">etag master</span> LastChangedAt
+{
+  <span class="k">create</span>; <span class="k">update</span>; <span class="k">delete</span>;
+  <span class="k">field</span> ( <span class="k">readonly</span> ) RequestId, Status;
+
+  <span class="k">action</span> ( <span class="k">features</span> : <span class="k">instance</span> ) approve
+    <span class="k">result</span> [1] $self;
+  <span class="k">validation</span> validateDates <span class="k">on save</span>
+    { <span class="k">create</span>; <span class="k">field</span> StartDate, EndDate; }
+  <span class="k">determination</span> setInitialStatus <span class="k">on modify</span>
+    { <span class="k">create</span>; }
+
+  <span class="k">mapping for</span> zsrv_request <span class="k">corresponding</span>;
+}</code></pre>
+    </div>
+  </div>
+  <div class="wrap stats-wrap">
+    <div class="stats">
+      <div class="stat"><b>5+ yrs</b><span>SAP ABAP delivery</span></div>
+      <div class="stat"><b>4</b><span>Firms: EY, Infosys, Capgemini, Poly Medicure</span></div>
+      <div class="stat"><b>5 modules</b><span>SD, MM, PM, FI and TM</span></div>
+      <div class="stat"><b>3</b><span>Certifications incl. SAP ABAP for HANA 2.0</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Services</div>
+        <h2>What I can build for you</h2>
+        <p>Freelance, contract and project-based SAP ABAP work, delivered remotely, end to end: technical specification, build, unit test, ATC and transport.</p>
+      </div>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></div>
+        <h3>Clean-core extensions</h3>
+        <p>ABAP Cloud and RAP business objects (managed, draft), CDS view entities, AMDP and released APIs, built to stay upgrade-safe on S/4HANA and RISE private cloud.</p>
+        <ul class="tags"><li class="tag">RAP</li><li class="tag">CDS</li><li class="tag">AMDP</li><li class="tag">ABAP Cloud</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/><path d="M7 12h10M12 7v10"/></svg></div>
+        <h3>APIs and integration</h3>
+        <p>Inbound and outbound REST APIs with JSON contracts, OAuth 2.0, validations and consolidated error responses, plus RFC and BAPI interfaces.</p>
+        <ul class="tags"><li class="tag">REST</li><li class="tag">OAuth 2.0</li><li class="tag">JSON</li><li class="tag">RFC/BAPI</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg></div>
+        <h3>OData and Fiori apps</h3>
+        <p>OData V2 services (SEGW) and RAP-based OData V4, CDS-driven Fiori Elements and SAPUI5 apps with posting through standard BAPIs.</p>
+        <ul class="tags"><li class="tag">OData V2/V4</li><li class="tag">SEGW</li><li class="tag">Fiori</li><li class="tag">SAPUI5</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <h3>Forms and output</h3>
+        <p>Adobe Forms, Smartforms and SAPscript for invoices, statements and documents, with output management setup and print logic.</p>
+        <ul class="tags"><li class="tag">Adobe Forms</li><li class="tag">Smartforms</li><li class="tag">SAPscript</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>RICEFW development</h3>
+        <p>ALV reports, enhancements (BAdI, user exits, screen exits), conversions (BAPI, BDC, LSMW), module pools, table maintenance and background jobs.</p>
+        <ul class="tags"><li class="tag">ALV</li><li class="tag">BAdI</li><li class="tag">BDC/LSMW</li><li class="tag">OOABAP</li></ul>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+        <h3>S/4HANA migration and tuning</h3>
+        <p>Custom-code remediation, SPDD/SPAU, ATC cleanup and performance fixes found with ST05, SAT and ST12.</p>
+        <ul class="tags"><li class="tag">ATC</li><li class="tag">SPDD/SPAU</li><li class="tag">ST05/SAT</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Selected work</div>
+        <h2>Recent project delivery</h2>
+        <p>From an S/4HANA implementation on RISE private cloud for an infrastructure, construction and real-estate client (MM, PM, SD, FI).</p>
+      </div>
+    </div>
+    <div>
+      <div class="case">
+        <div class="area">Integration</div>
+        <div>
+          <h3>SAP and Salesforce integration, 17 REST APIs</h3>
+          <p>Designed the field mapping between Salesforce (pre-sales) and SAP (post-sales) and built the SAP side of the Unit Master create/change, Channel Partner, Advance Payment and Completion Certificate APIs: JSON contracts, validations with consolidated success/failure responses, and outbound calls to Salesforce over OAuth 2.0 for property status, booking approval and payment milestones.</p>
+          <ul class="tags"><li class="tag">REST</li><li class="tag">JSON</li><li class="tag">OAuth 2.0</li><li class="tag">Salesforce</li></ul>
+        </div>
+      </div>
+      <div class="case">
+        <div class="area">Clean core</div>
+        <div>
+          <h3>Extending standard MM reports without modification</h3>
+          <p>ZMR51 wrapper over standard MR51 using SUBMIT and CL_SALV_BS_RUNTIME_INFO (zero modification); a PO long-text column in ME2N via BAdI ME_CHANGE_OUTTAB_CUS with hashed buffering; custom Stock tabs in ME51N and ME21N via BAdI and screen exit.</p>
+          <ul class="tags"><li class="tag">BAdI</li><li class="tag">SALV</li><li class="tag">Screen exit</li><li class="tag">MM</li></ul>
+        </div>
+      </div>
+      <div class="case">
+        <div class="area">Fiori / OData</div>
+        <div>
+          <h3>Fuel Consumption app</h3>
+          <p>OData V2 service (SEGW) and SAPUI5 app on nine CDS views, creating measurement documents and posting goods issue through BAPI_GOODSMVT_CREATE.</p>
+          <ul class="tags"><li class="tag">OData V2</li><li class="tag">SAPUI5</li><li class="tag">CDS</li><li class="tag">BAPI</li></ul>
+        </div>
+      </div>
+      <div class="case">
+        <div class="area">Plant Maintenance</div>
+        <div>
+          <h3>Equipment master extension and notification checks</h3>
+          <p>23-field Equipment Master extension (ITOB0001, CI_EQUI, custom subscreen) and a duplicate breakdown-notification check via BAdI NOTIF_EVENT_SAVE.</p>
+          <ul class="tags"><li class="tag">PM</li><li class="tag">Customer exit</li><li class="tag">BAdI</li></ul>
+        </div>
+      </div>
+      <div class="case">
+        <div class="area">Finance</div>
+        <div>
+          <h3>Vendor account statement</h3>
+          <p>Vendor account statement report with a Smartform output, sourcing GSTIN and PAN details.</p>
+          <ul class="tags"><li class="tag">FI</li><li class="tag">ALV</li><li class="tag">Smartforms</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODE -->
+<section id="code" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Open source</div>
+        <h2>Code samples on GitHub</h2>
+        <p>Reusable ABAP patterns I publish in abapGit-friendly repositories.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://github.com/sunny-bhanu?tab=repositories" target="_blank" rel="noopener">All repositories</a>
+    </div>
+    <div class="grid g3">
+      <a class="card" href="https://github.com/sunny-bhanu/abap-rap-service-request-draft-bo" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>RAP draft business object</h3>
+        <p>Managed, draft-enabled RAP BO in ABAP Cloud (strict 2): early numbering, status actions with feature control, validations, determinations, side effects, DCL, Fiori Elements annotations and ABAP Unit tests.</p>
+        <ul class="tags"><li class="tag">RAP</li><li class="tag">ABAP Cloud</li><li class="tag">ABAP Unit</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-rest-integration-kit" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>REST integration kit</h3>
+        <p>OAuth 2.0 token provider with caching, REST client with safe retries and idempotency, JSON helpers, consolidated response builder, inbound HTTP handler and 16 ABAP Unit tests.</p>
+        <ul class="tags"><li class="tag">REST</li><li class="tag">OAuth 2.0</li><li class="tag">JSON</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-cds-amdp-odata-rap-examples" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>CDS, AMDP, OData and RAP examples</h3>
+        <p>CDS view entities with associations, an AMDP-backed CDS table function, OData V2 design notes and a managed RAP BO with draft.</p>
+        <ul class="tags"><li class="tag">CDS</li><li class="tag">AMDP</li><li class="tag">OData</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-salv-runtime-capture-wrapper" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>SALV runtime capture wrapper</h3>
+        <p>Add columns to a standard report ALV (MR51) with SUBMIT and CL_SALV_BS_RUNTIME_INFO. No modification, no enhancement, no Z-copy.</p>
+        <ul class="tags"><li class="tag">Clean core</li><li class="tag">SALV</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-badi-me2n-longtext-column" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>ME2N long-text column</h3>
+        <p>PO item long text in ME2N/ME2L/ME2M via BAdI ME_CHANGE_OUTTAB_CUS and an append structure, with a hashed buffer around READ_TEXT.</p>
+        <ul class="tags"><li class="tag">BAdI</li><li class="tag">MM</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-badi-pm-notification-duplicate-check" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>PM duplicate notification check</h3>
+        <p>Blocks duplicate open breakdown notifications in IW21/IW22 with BAdI NOTIF_EVENT_SAVE, status-aware and filtered by notification type.</p>
+        <ul class="tags"><li class="tag">BAdI</li><li class="tag">PM</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-custom-tab-standard-transactions" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>Custom tabs in ME51N and ME21N</h3>
+        <p>Custom Stock tab with popup ALV via BAdI ME_GUI_PO_CUST and screen exit MM06E005, with memory-ID handoff across the BAdI and module-pool boundary.</p>
+        <ul class="tags"><li class="tag">Screen exit</li><li class="tag">BAdI</li><li class="tag">MM</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+      <a class="card" href="https://github.com/sunny-bhanu/abap-performance-patterns" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
+        <h3>ABAP performance patterns</h3>
+        <p>Before and after fixes: FOR ALL ENTRIES with its three guards, parallel cursor and hashed-table lookups, plus an ST05/SAT/ST12 checklist.</p>
+        <ul class="tags"><li class="tag">Performance</li><li class="tag">ST05</li></ul>
+        <span class="more">View repository &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Experience</div>
+        <h2>Where I have delivered</h2>
+      </div>
+    </div>
+    <ol class="tl">
+      <li>
+        <div class="when">Nov 2025 to present · Bengaluru · Hybrid</div>
+        <h3>Senior Consultant, SAP ABAP</h3>
+        <div class="org">EY GDS (Ernst &amp; Young Global Consulting Services)</div>
+        <ul>
+          <li>S/4HANA implementation on RISE private cloud (MM, PM, SD, FI); own RICEFW objects end to end.</li>
+          <li>SAP and Salesforce integration over 17 REST APIs; clean-core extensions; Fiori/OData app on CDS.</li>
+          <li>Recognised with the Achiever Extraordinaire award within four months of joining.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">Oct 2023 to Oct 2025 · Bengaluru · Hybrid</div>
+        <h3>Associate Consultant</h3>
+        <div class="org">Infosys</div>
+        <ul>
+          <li>S/4HANA implementation for SD and MM: BAdIs, user exits, BAPI and BDC conversions, RFC interfaces.</li>
+          <li>Adobe Forms, Smartforms and SAPscript outputs, ALV reports, table maintenance and background jobs.</li>
+          <li>OData services and CDS views; SPDD/SPAU during upgrades.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">Oct 2021 to Oct 2023 · Bengaluru</div>
+        <h3>Associate Consultant / Software Engineer</h3>
+        <div class="org">Capgemini Engineering</div>
+        <ul>
+          <li>Implementation project for SD and TM.</li>
+          <li>HANA migration: custom-code remediation, SPDD/SPAU and ATC checks.</li>
+          <li>ALV reports, Smartforms and SAPscript layouts; data migration with LSMW.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">Jan 2021 to Jun 2021 · Faridabad</div>
+        <h3>SAP ABAP Developer</h3>
+        <div class="org">Poly Medicure Ltd</div>
+        <ul>
+          <li>SAP R/3 implementation, rollout and support for SD and MM.</li>
+          <li>ALV reports, Smartforms, module-pool validations, enhancements and BDC.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Skills</div>
+        <h2>Technical toolkit</h2>
+      </div>
+    </div>
+    <div class="grid g3">
+      <div class="card skill-group"><h3>ABAP Cloud and RAP</h3><ul class="tags"><li class="tag">RAP (managed, draft)</li><li class="tag">Behaviour definitions</li><li class="tag">Released APIs</li><li class="tag">Clean Core</li><li class="tag">SAP BTP</li></ul></div>
+      <div class="card skill-group"><h3>Data modelling</h3><ul class="tags"><li class="tag">CDS view entities</li><li class="tag">AMDP</li><li class="tag">CDS table functions</li><li class="tag">DCL</li><li class="tag">SAP HANA</li></ul></div>
+      <div class="card skill-group"><h3>OData and UI</h3><ul class="tags"><li class="tag">OData V2 (SEGW)</li><li class="tag">OData V4</li><li class="tag">Fiori Elements</li><li class="tag">SAPUI5</li><li class="tag">Business Application Studio</li></ul></div>
+      <div class="card skill-group"><h3>Integration</h3><ul class="tags"><li class="tag">REST APIs</li><li class="tag">OAuth 2.0</li><li class="tag">JSON</li><li class="tag">RFC</li><li class="tag">BAPI</li></ul></div>
+      <div class="card skill-group"><h3>Classic ABAP</h3><ul class="tags"><li class="tag">OOABAP</li><li class="tag">ALV / SALV</li><li class="tag">BAdI</li><li class="tag">User and screen exits</li><li class="tag">Module pool</li><li class="tag">BDC</li><li class="tag">LSMW</li><li class="tag">Data Dictionary</li></ul></div>
+      <div class="card skill-group"><h3>Forms</h3><ul class="tags"><li class="tag">Adobe Forms</li><li class="tag">Smartforms</li><li class="tag">SAPscript</li><li class="tag">Output management</li></ul></div>
+      <div class="card skill-group"><h3>Quality and migration</h3><ul class="tags"><li class="tag">ATC</li><li class="tag">ABAP Unit</li><li class="tag">SPDD / SPAU</li><li class="tag">ST05 / SAT / ST12</li><li class="tag">Code remediation</li></ul></div>
+      <div class="card skill-group"><h3>Functional areas</h3><ul class="tags"><li class="tag">SD</li><li class="tag">MM</li><li class="tag">PM</li><li class="tag">FI</li><li class="tag">TM</li></ul></div>
+      <div class="card skill-group"><h3>Tools</h3><ul class="tags"><li class="tag">ADT / Eclipse</li><li class="tag">abapGit</li><li class="tag">SAP GUI</li><li class="tag">Git</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker">Credentials</div>
+        <h2>Certifications and education</h2>
+      </div>
+    </div>
+    <div class="grid g2">
+      <div class="card cert"><div class="badge">SAP</div><div><h3>SAP Certified Development Specialist</h3><p>ABAP for SAP HANA 2.0</p></div></div>
+      <div class="card cert"><div class="badge">SAP</div><div><h3>SAP Certified Development Associate</h3><p>Build Applications with SAP Business Application Studio</p></div></div>
+      <div class="card cert"><div class="badge">AZ</div><div><h3>Microsoft Certified: Azure Fundamentals</h3><p>AZ-900</p></div></div>
+      <div class="card cert"><div class="badge">EDU</div><div><h3>Presidency University</h3><p>Bengaluru</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Have an SAP ABAP requirement?</h2>
+        <p>I take on freelance, contract and project work remotely: RAP and CDS builds, integrations, forms, enhancements, migrations and support. Send me a message on LinkedIn with a short brief.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sunnybhanu/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/sunny-bhanu" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Sunny Bhanu · SAP ABAP Consultant · Bengaluru, India</div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch(e) {}
+  btn.addEventListener('click', function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e) {}
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

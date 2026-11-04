@@ -176,7 +176,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
     <div>
       <span class="eyebrow"><span class="dot"></span>Available for freelance, contract and project work</span>
       <h1>Senior <span class="hl">SAP ABAP</span> Consultant building clean-core S/4HANA solutions</h1>
-      <p class="lead">5+ years delivering S/4HANA implementations, HANA migrations and support. I build extensions with ABAP Cloud, RAP, CDS and OData, integrate SAP with external systems over REST, and deliver the full RICEFW stack.</p>
+      <p class="lead">5.5+ years delivering S/4HANA implementations, HANA migrations and support. I build extensions with ABAP Cloud, RAP, CDS and OData, integrate SAP with external systems over REST, and deliver the full RICEFW stack.</p>
       <ul class="chips">
         <li class="chip">S/4HANA</li><li class="chip">RISE private cloud</li><li class="chip">Clean Core</li>
         <li class="chip">ABAP Cloud</li><li class="chip">RAP</li><li class="chip">CDS</li><li class="chip">AMDP</li>
@@ -220,7 +220,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
   </div>
   <div class="wrap stats-wrap">
     <div class="stats">
-      <div class="stat"><b>5+ yrs</b><span>SAP ABAP delivery</span></div>
+      <div class="stat"><b>5.5+ yrs</b><span>SAP ABAP delivery</span></div>
       <div class="stat"><b>4</b><span>Firms: EY, Infosys, Capgemini, Poly Medicure</span></div>
       <div class="stat"><b>5 modules</b><span>SD, MM, PM, FI and TM</span></div>
       <div class="stat"><b>3</b><span>Certifications incl. SAP ABAP for HANA 2.0</span></div>
@@ -286,14 +286,14 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
       <div>
         <div class="kicker">Selected work</div>
         <h2>Recent project delivery</h2>
-        <p>From an S/4HANA implementation on RISE private cloud for an infrastructure, construction and real-estate client (MM, PM, SD, FI).</p>
+        <p>From two recent S/4HANA projects: a Salesforce integration for a real-estate client, and an implementation on RISE private cloud for an infrastructure and construction client (MM, PM, FI).</p>
       </div>
     </div>
     <div>
       <div class="case">
         <div class="area">Integration</div>
         <div>
-          <h3>SAP and Salesforce integration, 17 REST APIs</h3>
+          <h3>SAP and Salesforce integration, 17 REST APIs (real-estate client)</h3>
           <p>Designed the field mapping between Salesforce (pre-sales) and SAP (post-sales) and built the SAP side of the Unit Master create/change, Channel Partner, Advance Payment and Completion Certificate APIs: JSON contracts, validations with consolidated success/failure responses, and outbound calls to Salesforce over OAuth 2.0 for property status, booking approval and payment milestones.</p>
           <ul class="tags"><li class="tag">REST</li><li class="tag">JSON</li><li class="tag">OAuth 2.0</li><li class="tag">Salesforce</li></ul>
         </div>
@@ -302,7 +302,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
         <div class="area">Clean core</div>
         <div>
           <h3>Extending standard MM reports without modification</h3>
-          <p>ZMR51 wrapper over standard MR51 using SUBMIT and CL_SALV_BS_RUNTIME_INFO (zero modification); a PO long-text column in ME2N via BAdI ME_CHANGE_OUTTAB_CUS with hashed buffering; custom Stock tabs in ME51N and ME21N via BAdI and screen exit.</p>
+          <p>ZMR51 wrapper over standard MR51 using SUBMIT and CL_SALV_BS_RUNTIME_INFO (zero modification); a PO long-text column in ME2N via BAdI ME_CHANGE_OUTTAB_CUS with hashed buffering; custom Stock tabs in ME51N and ME21N via screen exits MEREQ001 and MM06E005 with BAdI ME_PROCESS_REQ_CUST.</p>
           <ul class="tags"><li class="tag">BAdI</li><li class="tag">SALV</li><li class="tag">Screen exit</li><li class="tag">MM</li></ul>
         </div>
       </div>
@@ -310,8 +310,8 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
         <div class="area">Fiori / OData</div>
         <div>
           <h3>Fuel Consumption app</h3>
-          <p>OData V2 service (SEGW) and SAPUI5 app on nine CDS views, creating measurement documents and posting goods issue through BAPI_GOODSMVT_CREATE.</p>
-          <ul class="tags"><li class="tag">OData V2</li><li class="tag">SAPUI5</li><li class="tag">CDS</li><li class="tag">BAPI</li></ul>
+          <p>OData V2 service (SEGW) behind a SAPUI5 fuel-entry app: 8 entity sets and function imports, PM98/PM99 order determination by ownership, line validations, and HR/KM measurement documents through MEASUREM_DOCUM_RFC_SINGLE_001 in one controlled LUW.</p>
+          <ul class="tags"><li class="tag">OData V2</li><li class="tag">SEGW</li><li class="tag">SAPUI5</li><li class="tag">PM</li></ul>
         </div>
       </div>
       <div class="case">
@@ -384,7 +384,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
       </a>
       <a class="card" href="https://github.com/sunny-bhanu/abap-custom-tab-standard-transactions" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">
         <h3>Custom tabs in ME51N and ME21N</h3>
-        <p>Custom Stock tab with popup ALV via BAdI ME_GUI_PO_CUST and screen exit MM06E005, with memory-ID handoff across the BAdI and module-pool boundary.</p>
+        <p>Custom Stock tab with popup ALV via screen exit MEREQ001 plus BAdI ME_PROCESS_REQ_CUST (ME51N) and screen exit MM06E005 (ME21N), unsaved items included, stock from the released CDS view I_MaterialStock.</p>
         <ul class="tags"><li class="tag">Screen exit</li><li class="tag">BAdI</li><li class="tag">MM</li></ul>
         <span class="more">View repository &rarr;</span>
       </a>
@@ -414,7 +414,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
         <div class="org">EY GDS (Ernst &amp; Young Global Consulting Services)</div>
         <ul>
           <li>S/4HANA implementation on RISE private cloud (MM, PM, SD, FI); own RICEFW objects end to end.</li>
-          <li>SAP and Salesforce integration over 17 REST APIs; clean-core extensions; Fiori/OData app on CDS.</li>
+          <li>SAP and Salesforce integration over 17 REST APIs; clean-core extensions; OData V2 (SEGW) service for a SAPUI5 fuel-entry app.</li>
           <li>Recognised with the Achiever Extraordinaire award within four months of joining.</li>
         </ul>
       </li>
